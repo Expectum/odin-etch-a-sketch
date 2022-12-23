@@ -1,9 +1,10 @@
 #container {
-    width: 100%;
+    width: 528px;
+    height: 528px;
 }
 div {
     float: left;
-    width: 10px;
+    width: 31px;
     border: 1px solid;
-    height: 10px;
+    height: 31px;
 }
