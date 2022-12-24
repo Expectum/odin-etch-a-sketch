@@ -3,7 +3,7 @@ createDivGrid();
 const gridItems = document.querySelectorAll('.grid-item');
 
 gridItems.forEach(gridItem => {
-    gridItems.addEventListener("mouseover", (e) => {
+    gridItem.addEventListener("mouseover", (e) => {
         highlight(gridItem)
     });
 });
