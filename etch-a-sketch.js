@@ -1,7 +1,6 @@
 const container = document.querySelector('#container');
 createDivGrid();
-const grindItems = document.querySelectorAll('.grid-item');
-
+const gridItems = document.querySelectorAll('.grid-item');
 
 
 function createDivGrid() {
