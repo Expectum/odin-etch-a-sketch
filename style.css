@@ -8,3 +8,6 @@ div {
     border: 1px solid;
     height: 31px;
 }
+.highlight {
+    background-color: green;
+}
