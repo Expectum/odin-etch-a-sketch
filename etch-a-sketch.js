@@ -2,6 +2,11 @@ const container = document.querySelector('#container');
 createDivGrid();
 const gridItems = document.querySelectorAll('.grid-item');
 
+gridItems.forEach(gridItem => {
+    gridItems.addEventListener("mouseover", (e) => {
+        highlight(gridItem)
+    });
+});
 
 function createDivGrid() {
 for (let i = 1; i <= 256; i++) {
