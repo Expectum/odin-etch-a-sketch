@@ -20,4 +20,7 @@ div {
 button {
     display: flex;
     align-self: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
 }
