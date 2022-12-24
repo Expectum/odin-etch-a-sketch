@@ -1,3 +1,9 @@
+body {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
 #container {
     width: 528px;
     height: 528px;
@@ -10,4 +16,8 @@ div {
 }
 .highlight {
     background-color: green;
+}
+button {
+    display: flex;
+    align-self: center;
 }
