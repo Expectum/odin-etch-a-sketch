@@ -10,9 +10,10 @@ align-items: center;
 }
 div {
     float: left;
-    width: 31px;
+    width: 32.89px;
+    height: 32.89px;
     border: 1px solid;
-    height: 31px;
+    box-sizing: border-box;
 }
 .highlight {
     background-color: green;
