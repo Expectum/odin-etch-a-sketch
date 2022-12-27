@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const button = document.querySelector('button');
+let isFirstGrid = true;
 createDivGrid(16);
 let gridItems = document.querySelectorAll('.grid-item');
 highlightItems();
@@ -11,11 +12,13 @@ gridItems.forEach(gridItem => {
 });
 }
 
-function createDivGrid(amount) {
+function createDivGrid(amount, isFirstGrid) {
 for (let i = 1; i <= (amount * amount); i++) {
     const div = document.createElement('div');
     div.classList.add('grid-item');
     container.appendChild(div);
+    div.style.height = `${100/amount}%`;
+    div.style.width = `${100/amount}%`;
 }
 }
 
@@ -28,7 +31,8 @@ button.addEventListener('click', () => {
         gridItem.remove();
     });
     amount = prompt('Enter the number of squares that you want for the new grid:');
-    createDivGrid(amount);
+    isFirstGrid = false;
+    createDivGrid(amount, isFirstGrid);
     gridItems = document.querySelectorAll('.grid-item');
     highlightItems();
 })
