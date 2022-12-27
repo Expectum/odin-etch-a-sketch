@@ -4,10 +4,26 @@ let isFirstGrid = true;
 createDivGrid(16);
 let gridItems = document.querySelectorAll('.grid-item');
 highlightItems();
+function random(min, max) {
+    const num = Math.floor(Math.random() * (max - min)) + min;
+    return num;
+  }
+  
+  function randomColor() {
+    return (
+      "rgb(" +
+      random(0, 255) +
+      ", " +
+      random(0, 255) +
+      ", " +
+      random(0, 255) +
+      ")"
+    );
+  }
 function highlightItems(){
 gridItems.forEach(gridItem => {
     gridItem.addEventListener("mouseover", (e) => {
-        highlight(gridItem)
+        e.target.style.backgroundColor = randomColor();
     });
 });
 }
@@ -22,9 +38,6 @@ for (let i = 1; i <= (amount * amount); i++) {
 }
 }
 
-function highlight(item) {
-    item.classList.add('highlight');
-}
 
 button.addEventListener('click', () => {
     gridItems.forEach(gridItem => {
@@ -35,4 +48,5 @@ button.addEventListener('click', () => {
     createDivGrid(amount, isFirstGrid);
     gridItems = document.querySelectorAll('.grid-item');
     highlightItems();
+
 })
