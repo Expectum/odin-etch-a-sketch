@@ -15,9 +15,7 @@ div {
     border: 1px solid;
     box-sizing: border-box;
 }
-.highlight {
-    background-color: green;
-}
+
 button {
     display: flex;
     align-self: center;
